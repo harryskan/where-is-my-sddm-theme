@@ -325,24 +325,40 @@ Rectangle {
 
         Text {
             id: helpMessage
+            visible: true
+            text: "Help F1 - " +
+                "Next User F2 - " +
+                "Next Session F3 - " +
+                "Suspend F10 - " +
+                "Poweroff F11 - " +
+                "Reboot F12"
+            /*
             visible: false
             text: "Show help - F1\n" +
-                  "Cycle select next user - F2 or Alt+u\n" +
-                  "Cycle select previous user - Ctrl+F2 or Alt+Ctrl+u\n" +
-                  "Cycle select next session - F3 or Alt+s\n" +
-                  "Cycle select previous session - Ctrl+F3 or Alt+Ctrl+s\n" +
-                  "Suspend - F10\n" +
-                  "Poweroff - F11\n" +
-                  "Reboot - F12"
+                "Cycle select next user - F2 or Alt+u\n" +
+                "Cycle select previous user - Ctrl+F2 or Alt+Ctrl+u\n" +
+                "Cycle select next session - F3 or Alt+s\n" +
+                "Cycle select previous session - Ctrl+F3 or Alt+Ctrl+s\n" +
+                "Suspend - F10\n" +
+                "Poweroff - F11\n" +
+                "Reboot - F12"
+            */
             color: textColor
             font.pointSize: helpFontSize
             font.family: helpFont
             anchors {
                 top: parent.top
                 topMargin: 30
+                horizontalCenter: parent.horizontalCenter
+            }
+            /*
+            anchors {
+                top: parent.top
+                topMargin: 30
                 left: parent.left
                 leftMargin: 30
             }
+            */
         }
 
         Component.onCompleted: {
